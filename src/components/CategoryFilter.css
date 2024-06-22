@@ -1,0 +1,252 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap");
+
+:root {
+   --color-black: hsl(0, 0%, 10%);
+   --color-darks: hsl(0, 0%, 25%);
+   --color-greys: hsl(0, 0%, 60%);
+   --color-light: hsl(0, 0%, 95%);
+   --color-white: hsl(0, 0%, 100%);
+   --color-blue-100: hsl(217, 91%, 65%);
+   --color-blue-200: hsl(221, 83%, 55%);
+   --color-blue-300: hsl(224, 76%, 45%);
+   --shadow-small: 0 1px 3px 0 rgba(0, 0, 0, 0.1),
+      0 1px 2px 0 rgba(0, 0, 0, 0.06);
+   --shadow-medium: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -1px rgba(0, 0, 0, 0.06);
+   --shadow-large: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+      0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+*,
+*::before,
+*::after {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   list-style: none;
+   list-style-type: none;
+   text-decoration: none;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+   text-rendering: optimizeLegibility;
+}
+
+html {
+   font-size: 100%;
+   box-sizing: inherit;
+   scroll-behavior: smooth;
+   height: -webkit-fill-available;
+}
+
+body {
+   font-family: "Rubik", ui-sans-serif, system-ui, -apple-system, sans-serif;
+   font-size: 1rem;
+   font-weight: 400;
+   line-height: 1.5;
+   color: var(--color-black);
+   background-color: var(--color-black);
+}
+
+.category-filter button {
+  margin: 5px;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  font-family: "Rubik", sans-serif;
+  color: var(--color-white);
+  background-color: var(--color-blue-200);
+  border: none;
+  border-radius: 4px;
+  box-shadow: var(--shadow-small);
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: var(--color-blue-300);
+  }
+}
+
+/* @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"); */
+/* @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"); */
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  font-family: "Rubik", sans-serif;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+  border: 1px solid var(--color-greys);
+  border-radius: 4px;
+  outline: none;
+}
+
+.search-bar button {
+  padding: 0.5rem 1rem;
+  color: var(--color-white);
+  background-color: var(--color-blue-200);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: var(--color-blue-300);
+  }
+}
+
+/* @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"); */
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  font-family: "Rubik", sans-serif;
+  color: white;
+  
+  
+}
+
+.pagination button {
+  padding: 0.5rem 1rem;
+  color: var(--color-white);
+  background-color: var(--color-blue-200);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  
+  &:disabled {
+    background-color: var(--color-greys);
+    cursor: not-allowed;
+  }
+
+  &:hover:not(:disabled) {
+    background-color: var(--color-blue-300);
+  }
+}
+
+/* @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"); */
+
+.article-card {
+  border: 1px solid var(--color-greys);
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem 0;
+  font-family: "Rubik", sans-serif;
+  box-shadow: var(--shadow-small);
+  transition: box-shadow 0.3s ease;
+  background-color: whitesmoke;
+}
+
+.article-card:hover {
+  box-shadow: var(--shadow-medium);
+}
+
+.article-card h3 {
+  font-size: 1.25rem;
+  color: var(--color-black);
+  margin-bottom: 0.5rem;
+}
+
+.article-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.article-card p {
+  font-size: 1rem;
+  color: var(--color-darks);
+  margin-bottom: 1rem;
+}
+
+.favorite-button {
+  padding: 0.5rem 1rem;
+  color: var(--color-white);
+  background-color: var(--color-blue-200);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.favorite-button:hover {
+  background-color: var(--color-blue-300);
+}
+
+.homepage {
+    color: white;   
+     
+  }
+  /* HTML: <div class="loader"></div> */
+.loader {
+    --w:10ch;
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 30px;
+    letter-spacing: var(--w);
+    width:var(--w);
+    overflow: hidden;
+    white-space: nowrap;
+    text-shadow: 
+      calc(-1*var(--w)) 0, 
+      calc(-2*var(--w)) 0, 
+      calc(-3*var(--w)) 0, 
+      calc(-4*var(--w)) 0,
+      calc(-5*var(--w)) 0, 
+      calc(-6*var(--w)) 0, 
+      calc(-7*var(--w)) 0, 
+      calc(-8*var(--w)) 0, 
+      calc(-9*var(--w)) 0;
+    animation: l16 2s infinite;
+  }
+  .loader:before {
+    content:"Loading...";
+  }
+  @keyframes l16 {
+    20% {text-shadow: 
+      calc(-1*var(--w)) 0, 
+      calc(-2*var(--w)) 0 red, 
+      calc(-3*var(--w)) 0, 
+      calc(-4*var(--w)) 0 #ffa516,
+      calc(-5*var(--w)) 0 #63fff4, 
+      calc(-6*var(--w)) 0, 
+      calc(-7*var(--w)) 0, 
+      calc(-8*var(--w)) 0 green, 
+      calc(-9*var(--w)) 0;}
+    40% {text-shadow: 
+      calc(-1*var(--w)) 0, 
+      calc(-2*var(--w)) 0 red, 
+      calc(-3*var(--w)) 0 #e945e9, 
+      calc(-4*var(--w)) 0,
+      calc(-5*var(--w)) 0 green, 
+      calc(-6*var(--w)) 0 orange, 
+      calc(-7*var(--w)) 0, 
+      calc(-8*var(--w)) 0 green, 
+      calc(-9*var(--w)) 0;}
+    60% {text-shadow: 
+      calc(-1*var(--w)) 0 lightblue, 
+      calc(-2*var(--w)) 0, 
+      calc(-3*var(--w)) 0 #e945e9, 
+      calc(-4*var(--w)) 0,
+      calc(-5*var(--w)) 0 green, 
+      calc(-6*var(--w)) 0, 
+      calc(-7*var(--w)) 0 yellow, 
+      calc(-8*var(--w)) 0 #ffa516, 
+      calc(-9*var(--w)) 0 red;}
+    80% {text-shadow: 
+      calc(-1*var(--w)) 0 lightblue, 
+      calc(-2*var(--w)) 0 yellow, 
+      calc(-3*var(--w)) 0 #63fff4, 
+      calc(-4*var(--w)) 0 #ffa516,
+      calc(-5*var(--w)) 0 red, 
+      calc(-6*var(--w)) 0, 
+      calc(-7*var(--w)) 0 grey, 
+      calc(-8*var(--w)) 0 #63fff4, 
+      calc(-9*var(--w)) 0 ;}
+  }
+ 
