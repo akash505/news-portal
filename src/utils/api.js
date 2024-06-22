@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 const API_KEY = '66b0ffc792794fe3989e62a3b64c0a2d';
-const BASE_URL = 'https://newsapi.org/v2';
+const BASE_URL = 'https://newsapi.org/v2/';
 
 export const fetchArticles = async (category = 'general', page = 1, query = '') => {
   try {
